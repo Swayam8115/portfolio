@@ -1,68 +1,259 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Portfolio Design System - Dark Theme with Creative Elements */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    /* Dark Theme Portfolio Colors */
+    --background: 220 25% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 270 100% 70%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 210 10% 65%;
+
+    --accent: 195 100% 60%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 210 20% 95%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 270 100% 70%;
+
+    --radius: 0.75rem;
+
+    /* Custom Portfolio Colors - Toned Down */
+    --neon-purple: 270 60% 55%;
+    --neon-cyan: 195 70% 45%;
+    --neon-green: 150 70% 45%;
+    --dark-surface: 220 20% 12%;
+    --darker-surface: 220 25% 8%;
+    
+    /* Gradients - Toned Down */
+    --gradient-primary: linear-gradient(135deg, hsl(270 60% 55%), hsl(195 70% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(195 70% 45%), hsl(150 70% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(270 60% 55%), hsl(300 60% 55%));
+    
+    /* Geometric Patterns */
+    --pattern-dots: radial-gradient(circle at 1px 1px, hsl(270 100% 70% / 0.3) 1px, transparent 0);
+    --pattern-grid: linear-gradient(hsl(270 100% 70% / 0.1) 1px, transparent 1px), linear-gradient(90deg, hsl(270 100% 70% / 0.1) 1px, transparent 1px);
+    
+    /* Shadows & Glows */
+    --glow-primary: 0 0 30px hsl(270 100% 70% / 0.5);
+    --glow-accent: 0 0 20px hsl(195 100% 60% / 0.4);
+    --shadow-card: 0 10px 40px -10px hsl(220 25% 8% / 0.7);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Remove dark mode toggle from sidebar section */
+    --sidebar-background: 220 20% 12%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 270 100% 70%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 270 100% 70%;
   }
-  a:hover {
-    color: #747bff;
+
+  /* Remove the dark mode section as we're always in dark mode */
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
-  button {
-    background-color: #f9f9f9;
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Custom Portfolio Components */
+  .portfolio-glow {
+    box-shadow: var(--glow-primary);
+  }
+
+  .portfolio-card {
+    @apply bg-card border border-border rounded-lg p-6;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--glow-primary);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border {
+    position: relative;
+    background: var(--gradient-primary);
+    padding: 2px;
+    border-radius: var(--radius);
+  }
+
+  .gradient-border > * {
+    background: hsl(var(--background));
+    border-radius: calc(var(--radius) - 2px);
+  }
+
+  .geometric-pattern {
+    background-image: var(--pattern-dots);
+    background-size: 20px 20px;
+  }
+
+  .grid-pattern {
+    background-image: var(--pattern-grid);
+    background-size: 20px 20px;
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0% { 
+      box-shadow: 0 0 20px hsl(270 100% 70% / 0.3);
+    }
+    100% { 
+      box-shadow: 0 0 40px hsl(270 100% 70% / 0.6);
+    }
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .rotate-y-12 {
+    transform: rotateY(12deg);
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* Enhanced navbar animations */
+  .nav-item-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-item-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  .nav-item-hover:hover::before {
+    left: 100%;
+  }
+
+  /* Animated nodes for intro section */
+  .animated-nodes {
+    animation: rotate-nodes 10s linear infinite;
+  }
+
+  @keyframes rotate-nodes {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Neon glow effects */
+  .neon-glow-primary {
+    box-shadow: 0 0 20px hsl(270 100% 70% / 0.5);
+  }
+
+  .neon-glow-accent {
+    box-shadow: 0 0 20px hsl(195 100% 60% / 0.5);
+  }
+
+  .neon-glow-green {
+    box-shadow: 0 0 20px hsl(150 100% 60% / 0.5);
+  }
+
+  /* Shadow glow utilities */
+  .shadow-glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+
+  .shadow-glow-accent {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.3);
+  }
+
+  .shadow-glow-success {
+    box-shadow: 0 0 20px hsl(var(--neon-green) / 0.3);
+  }
+
+  .shadow-glow-purple {
+    box-shadow: 0 0 20px hsl(270 91% 65% / 0.3);
   }
 }
