@@ -2,7 +2,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowDown, Github, Linkedin, Download } from 'lucide-react';
 
-
 export function IntroSection() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -86,14 +85,28 @@ export function IntroSection() {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow-primary transition-all duration-300">
+              <Button 
+                size="lg" 
+                className="bg-gradient-primary hover:shadow-glow-primary transition-all duration-300"
+                onClick={() => window.open('https://drive.google.com/file/d/1zRIE0skYmzSSCyuaCWSfBfGx_s9WD0d_/view?usp=drive_link', '_blank')}
+              >
                 Resume
               </Button>
-              <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/10">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-primary/30 hover:bg-primary/10"
+                onClick={() => window.open('https://github.com/Swayam8115', '_blank')}
+              >
                 <Github className="w-5 h-5 mr-2" />
                 GitHub
               </Button>
-              <Button variant="outline" size="lg" className="border-accent/30 hover:bg-accent/10">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-accent/30 hover:bg-accent/10"
+                onClick={() => window.open('https://www.linkedin.com/in/swayam-patel-4032a7297/', '_blank')}
+              >
                 <Linkedin className="w-5 h-5 mr-2" />
                 LinkedIn
               </Button>
@@ -113,7 +126,7 @@ export function IntroSection() {
                   {/* Character Image */}
                   <div className="relative w-80 h-80 rounded-full overflow-hidden border-2 border-gradient-to-br from-primary via-neon-cyan to-neon-purple shadow-2xl">
                     <img 
-                      src="\Image_banner.jpg" 
+                      src="/Image_banner.jpg" 
                       alt="Tech Developer Character"
                       className="w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-700 ease-out"
                     />

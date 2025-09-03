@@ -17,7 +17,7 @@ const achievements = [
     description: "Received an official certificate from IIT Guwahati for consistent technical contribution in CVAlign.",
     color: "neon-cyan",
     type: "recognition",
-    link: "#"
+    link: "https://drive.google.com/file/d/1ZrJN9vZV0oKhWeuzyGFFYIt0RWSfnjb4/view"
   }
 ];
 
@@ -107,6 +107,7 @@ export function AchievementsSection() {
                           size="sm" 
                           variant="outline"
                           className={`border-${achievement.color}/30 hover:bg-${achievement.color}/10 hover:border-${achievement.color}/50 transition-all duration-300`}
+                          onClick={() => window.open(achievement.link, '_blank')}
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
                           View Certificate

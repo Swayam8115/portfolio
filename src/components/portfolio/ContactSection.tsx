@@ -13,22 +13,22 @@ const contactMethods = [
   {
     icon: Mail,
     label: "Email",
-    value: "your.email@example.com",
-    href: "mailto:your.email@example.com",
+    value: "swayampatel2421@gmail.com",
+    href: "mailto:swayampatel2421@gmail.com",
     color: "primary"
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/yourusername",
-    href: "https://github.com/yourusername",
+    value: "github.com/Swayam8115",
+    href: "https://github.com/Swayam8115",
     color: "accent"
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/yourprofile",
-    href: "https://linkedin.com/in/yourprofile",
+    value: "linkedin.com/in/swayam-patel-4032a7297/",
+    href: "https://www.linkedin.com/in/swayam-patel-4032a7297/",
     color: "neon-cyan"
   },
   {
@@ -112,7 +112,7 @@ export function ContactSection() {
                 <Button 
                   size="lg" 
                   className="bg-gradient-primary hover:shadow-glow-primary transition-all duration-300"
-                  onClick={() => window.open('mailto:your.email@example.com', '_blank')}
+                  onClick={() => window.open('mailto:swayampatel2421@gmail.com', '_blank')}
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Send Email

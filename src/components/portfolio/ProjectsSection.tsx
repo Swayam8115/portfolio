@@ -17,7 +17,7 @@ const projects = [
       "Scalable Document Handling: MongoDB + Cloudinary API integration"
     ],
     technologies: ["Python", "LangChain", "React.js", "FastAPI", "MongoDB", "Cloudinary", "Groq", "Tailwind CSS"],
-    github: "#",
+    github: "https://github.com/Swayam8115/CV_Align",
     featured: true,
     theme: "primary",
     icon: Code2
@@ -34,7 +34,7 @@ const projects = [
       "Cloud Storage: Cloudinary APIs for efficient doubt content management"
     ],
     technologies: ["Node.js", "Express.js", "React.js", "MongoDB", "WebSocket", "OAuth", "Cloudinary"],
-    github: "#",
+    github: "https://github.com/Swayam8115/InstEd",
     featured: true,
     theme: "neon-cyan",
     icon: Database
@@ -49,7 +49,7 @@ const projects = [
       "Efficient Management: OOP principles with Java Collections Framework optimization"
     ],
     technologies: ["Java", "OOP", "Collections Framework", "File I/O", "CLI"],
-    github: "#",
+    github: "https://github.com/Swayam8115/FloorPlanner",
     featured: false,
     theme: "neon-green",
     icon: Cloud
@@ -193,6 +193,7 @@ export function ProjectsSection() {
                             project.theme === 'neon-cyan' ? 'bg-gradient-to-r from-accent to-accent/80 hover:shadow-lg hover:shadow-accent/25' :
                             'bg-gradient-to-r from-neon-green to-neon-green/80 hover:shadow-lg hover:shadow-neon-green/25'
                           } text-white hover:scale-105 transition-all duration-300`}
+                          onClick={() => window.open(project.github, '_blank')}
                         >
                           <Github className="w-4 h-4 mr-2" />
                           View Source
@@ -286,7 +287,7 @@ export function ProjectsSection() {
         <div className="text-center mt-20">
           <div className="inline-flex items-center gap-3 px-8 py-4 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-full">
             <span className="text-muted-foreground">Want to see more projects?</span>
-            <Button size="sm" className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
+            <Button size="sm" className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/25 transition-all duration-300" onClick={() => window.open('https://github.com/Swayam8115', '_blank')}>
               <Github className="w-4 h-4 mr-2" />
               Visit GitHub
             </Button>
