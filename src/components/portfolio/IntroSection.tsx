@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowDown, Github, Linkedin, Download } from 'lucide-react';
 
+
 export function IntroSection() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -112,7 +113,7 @@ export function IntroSection() {
                   {/* Character Image */}
                   <div className="relative w-80 h-80 rounded-full overflow-hidden border-2 border-gradient-to-br from-primary via-neon-cyan to-neon-purple shadow-2xl">
                     <img 
-                      src="/image_banner.png" 
+                      src="\Image_banner.jpg" 
                       alt="Tech Developer Character"
                       className="w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-700 ease-out"
                     />

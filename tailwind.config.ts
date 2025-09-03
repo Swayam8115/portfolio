@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
 	darkMode: "class",
@@ -22,8 +23,10 @@ export default {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
+
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -61,6 +64,9 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				 borderColor: {
+					DEFAULT: 'hsl(var(--border))', // 👈 make border the default
 				},
 				// Custom Portfolio Colors
 				'neon-purple': 'hsl(var(--neon-purple))',
@@ -135,5 +141,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [animate],
 } satisfies Config;
