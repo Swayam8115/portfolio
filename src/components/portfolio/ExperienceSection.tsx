@@ -38,7 +38,7 @@ export function ExperienceSection() {
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Calendar className="w-4 h-4" />
-                    <span>June 2025 - Present</span>
+                    <span>June 2025 - August 2025</span>
                   </div>
                 </div>
               </div>
