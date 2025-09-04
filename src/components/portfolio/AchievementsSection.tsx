@@ -70,7 +70,7 @@ export function AchievementsSection() {
           <div className="flex items-center gap-4 mb-10">
             <div className="flex items-center gap-3">
               <Award className="w-8 h-8 text-primary" />
-              <h3 className="text-3xl font-bold text-primary">Competitive Achievements</h3>
+              <h3 className="text-3xl font-bold text-primary">Achievements</h3>
             </div>
             <div className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent" />
           </div>
