@@ -54,7 +54,7 @@ export function ExperienceSection() {
                         <Badge variant="secondary" className="text-xs">Gen AI</Badge>
                       </h4>
                       <p className="text-muted-foreground leading-relaxed">
-                        Currently developing AI-driven backend services using Retrieval-Augmented 
+                        Developed AI-driven backend services using Retrieval-Augmented 
                         Generation (RAG), LangChain, and LangGraph to power a smart and scalable 
                         talent-opportunity matching platform.
                       </p>
@@ -71,7 +71,7 @@ export function ExperienceSection() {
                         <Badge variant="secondary" className="text-xs">Backend</Badge>
                       </h4>
                       <p className="text-muted-foreground leading-relaxed">
-                        Building scalable backend services in Python to support platform growth, 
+                        Built scalable backend services in Python to support platform growth, 
                         focusing on performance optimization and clean architecture.
                       </p>
                     </div>
@@ -87,7 +87,7 @@ export function ExperienceSection() {
                         <Badge variant="secondary" className="text-xs">DevOps</Badge>
                       </h4>
                       <p className="text-muted-foreground leading-relaxed">
-                        Independently improving backend architecture and delivering modular, maintainable, 
+                        Independently improved backend architecture and delivering modular, maintainable, 
                         well-documented code with Celery + Redis for scalable task queues, efficient data flow, 
                         and future extensibility.
                       </p>
