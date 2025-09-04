@@ -100,7 +100,7 @@ export function SkillsSection() {
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div className="space-y-2">
                   <div className="text-2xl">🤖</div>
-                  <h4 className="font-semibold text-primary">AI/ML Development</h4>
+                  <h4 className="font-semibold text-primary">Gen-AI Development</h4>
                   <p className="text-sm text-muted-foreground">RAG, LLM Integration, Prompt Engineering</p>
                 </div>
                 <div className="space-y-2">

@@ -104,7 +104,7 @@ export function ProjectsSection() {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Innovative solutions built with cutting-edge technologies, 
-            showcasing expertise in <span className="text-primary font-semibold">AI/ML</span>, 
+            showcasing expertise in <span className="text-primary font-semibold">AI</span>, 
             <span className="text-accent font-semibold"> full-stack development</span>, and 
             <span className="text-neon-green font-semibold"> system design</span>
           </p>
