@@ -1,10 +1,46 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Github, Sparkles, Code2, Database, Cloud } from 'lucide-react';
+import { Github, Sparkles, Code2, Database, Cloud, Play, Brain, Shield } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
 const projects = [
+  {
+    title: "Sanjaya-AI",
+    subtitle: "AI-Powered Multi-Agent Research & Reporting Platform",
+    description: "Advanced AI platform that uses an agent-based architecture and GenAI to automate cross-domain research, insight synthesis, and professional report generation across clinical trials, sales data, patents, internal knowledge, and web intelligence.",
+    highlights: [
+      "Multi-Agent Intelligence Architecture: Designed a master-agent orchestration system that dynamically routes user queries to specialized agents for clinical trials, sales insights, patents, internal documents, and web intelligence",
+      "GenAI-Powered Reasoning & Synthesis: Leveraged Gemini 2.5 Flash via the OpenAI SDK for intelligent query understanding, agent selection, structured output generation, and insight synthesis",
+      "Automated Report Generation: Implemented end-to-end PDF report generation using ReportLab with structured tables, charts, and summaries, enabling one-click access to decision-ready reports",
+      "Cross-Source Data Integration: Integrated Supabase for structured sales data, public APIs for clinical trials, internal document parsing, and real-time web intelligence into a unified analysis pipeline",
+      "Scalable & Modular Backend Design: Built with a clean, extensible backend architecture where new agents, data sources, or analysis modules can be added without impacting existing workflows",
+      "Modern Frontend Experience: Developed a responsive user interface using React.js, Vite, TypeScript, and TailwindCSS for seamless query input and report access"
+    ],
+    technologies: ["Python", "FastAPI", "LangGraph", "OpenAI SDK", "Gemini 2.5 Flash", "React.js", "Vite", "TypeScript", "TailwindCSS", "Supabase", "ReportLab"],
+    github: "https://github.com/Swayam8115/Sanjaya-AI",
+    demo: "https://youtu.be/eXlGkw-12rA",
+    featured: true,
+    theme: "primary",
+    icon: Brain
+  },
+  {
+    title: "GUARDIAN",
+    subtitle: "AI-Powered FIR Analysis & Crime Visualization Platform",
+    description: "A smart crime analysis and visualization platform that processes FIR records, extracts structured information using Generative AI, and presents geospatial crime insights through an interactive map interface for improved situational awareness and decision-making.",
+    highlights: [
+      "FIR Data Extraction & Structuring: Automated extraction of key FIR details such as crime categories, incident summaries, and locations using Gemini 2.5 Pro for high-accuracy language understanding",
+      "AI-Driven Crime Classification & Summarization: Leveraged Gemini 2.5 Pro to classify crimes, generate concise incident summaries, and normalize FIR data for consistent downstream analysis",
+      "Interactive Crime Map Visualization: Developed an interactive map-based visualization displaying FIR locations with clustering and intelligent marker offsetting to handle overlapping incidents",
+      "Backend API & Secure Data Storage: Implemented a FastAPI-based backend integrated with Supabase (PostgreSQL) for reliable, scalable, and secure FIR data storage and retrieval",
+      "Scalable & Modular Architecture: Designed the system for extensibility, enabling future additions such as heatmaps, time-based crime analysis, and real-time crime reporting"
+    ],
+    technologies: ["Python", "FastAPI", "Supabase(PostgreSQL)", "Gemini 2.5 Pro", "MapMyIndia", "OpenStreetMap", "HTML"],
+    github: "https://github.com/Swayam8115/guardian",
+    featured: true,
+    theme: "neon-cyan",
+    icon: Shield
+  },
   {
     title: "CVAlign",
     subtitle: "AI-Powered CV Evaluation Platform",
@@ -184,8 +220,21 @@ export function ProjectsSection() {
                         </p>
                       </div>
                       
-                      {/* Enhanced Action Button */}
-                      <div className="flex gap-3">
+                      {/* Enhanced Action Buttons */}
+                      <div className="flex gap-3 flex-wrap">
+                        <Button 
+                          size="default" 
+                          variant="outline"
+                          className={`${
+                            project.theme === 'primary' ? 'border-primary/50 text-primary hover:bg-primary/10 hover:shadow-lg hover:shadow-primary/25' :
+                            project.theme === 'neon-cyan' ? 'border-accent/50 text-accent hover:bg-accent/10 hover:shadow-lg hover:shadow-accent/25' :
+                            'border-neon-green/50 text-neon-green hover:bg-neon-green/10 hover:shadow-lg hover:shadow-neon-green/25'
+                          } hover:scale-105 transition-all duration-300`}
+                          onClick={() => window.open(project.demo, '_blank')}
+                        >
+                          <Play className="w-4 h-4 mr-2" />
+                          Demo Video
+                        </Button>
                         <Button 
                           size="default" 
                           className={`${

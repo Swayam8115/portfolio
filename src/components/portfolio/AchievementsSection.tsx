@@ -5,6 +5,14 @@ import { Award, Trophy, Users, Megaphone, TrendingUp, ExternalLink, Medal } from
 
 const achievements = [
   {
+    icon: Award,
+    title: "Internship Completion Certificate",
+    description: "Received an official Internship Completion Certificate for successfully completing my Software Engineering Internship.",
+    color: "accent",
+    type: "recognition",
+    link: "https://drive.google.com/file/d/1iPn_6JSGKOOaSckFPAFw2zo_2hRWHf7h/view?usp=sharing"
+  },
+  {
     icon: Trophy,
     title: "OPTIGO Coding Contest",
     description: "Secured 12th rank in OPTIGO, the inter-IIIT coding contest hosted by CODAME, IIIT Bhopal.",
@@ -130,7 +138,7 @@ export function AchievementsSection() {
             </div>
             <div className="h-px flex-1 bg-gradient-to-r from-neon-green/50 to-transparent" />
           </div>
-
+ 
           <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {extracurriculars.map((activity, index) => {
               const Icon = activity.icon;
