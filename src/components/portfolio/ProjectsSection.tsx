@@ -222,19 +222,21 @@ export function ProjectsSection() {
                       
                       {/* Enhanced Action Buttons */}
                       <div className="flex gap-3 flex-wrap">
-                        <Button 
-                          size="default" 
-                          variant="outline"
-                          className={`${
-                            project.theme === 'primary' ? 'border-primary/50 text-primary hover:bg-primary/10 hover:shadow-lg hover:shadow-primary/25' :
-                            project.theme === 'neon-cyan' ? 'border-accent/50 text-accent hover:bg-accent/10 hover:shadow-lg hover:shadow-accent/25' :
-                            'border-neon-green/50 text-neon-green hover:bg-neon-green/10 hover:shadow-lg hover:shadow-neon-green/25'
-                          } hover:scale-105 transition-all duration-300`}
-                          onClick={() => window.open(project.demo, '_blank')}
-                        >
-                          <Play className="w-4 h-4 mr-2" />
-                          Demo Video
-                        </Button>
+                        {project.demo && (
+                          <Button 
+                            size="default" 
+                            variant="outline"
+                            className={`${
+                              project.theme === 'primary' ? 'border-primary/50 text-primary hover:bg-primary/10 hover:shadow-lg hover:shadow-primary/25' :
+                              project.theme === 'neon-cyan' ? 'border-accent/50 text-accent hover:bg-accent/10 hover:shadow-lg hover:shadow-accent/25' :
+                              'border-neon-green/50 text-neon-green hover:bg-neon-green/10 hover:shadow-lg hover:shadow-neon-green/25'
+                            } hover:scale-105 transition-all duration-300`}
+                            onClick={() => window.open(project.demo, '_blank')}
+                          >
+                            <Play className="w-4 h-4 mr-2" />
+                            Demo Video
+                          </Button>
+                        )}
                         <Button 
                           size="default" 
                           className={`${
