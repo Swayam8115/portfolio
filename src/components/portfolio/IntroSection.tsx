@@ -77,7 +77,7 @@ export function IntroSection() {
                   <p className="text-lg text-accent">Surat, Gujarat, India</p>
                 </div>
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed">
-                  Third-year Computer Science Engineering student at IIIT Pune, 
+                  Final Year Computer Science Engineering student at IIIT Pune, 
                   passionate about building innovative solutions with <span className="text-primary font-semibold">AI</span> and 
                   <span className="text-neon-cyan font-semibold"> full-stack development</span>.
                 </p>

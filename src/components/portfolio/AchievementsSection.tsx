@@ -32,7 +32,7 @@ const achievements = [
 const extracurriculars = [
   {
     icon: Users,
-    title: "Script Writer",
+    title: "Club Head",
     organization: "Abhinay, Dramatics Club – IIIT Pune",
     description: "Scripted and directed multiple stage performances with a focus on character design.",
     color: "neon-green",
